@@ -6,6 +6,9 @@
 
 PROXY_TARGET=`echo -e $PROXY_TARGET`
 
+echo `whoami`
+echo PROXY_TARGET
+
 cat <<EOF > /opt/rh/httpd24/root/etc/httpd/conf.d/proxy.conf
 ProxyRequests Off
 ProxyPass / http://$PROXY_TARGET
