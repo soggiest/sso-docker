@@ -9,10 +9,12 @@ PROXY_TARGET=`echo -e $PROXY_TARGET`
 echo `whoami`
 echo PROXY_TARGET
 
-cat <<EOF > /opt/rh/httpd24/root/etc/httpd/conf.d/proxy.conf
+cat <<EOF > /tmp/proxy.conf
 ProxyRequests Off
 ProxyPass / http://$PROXY_TARGET
 ProxyPassReverse / http://$PROXY_TARGET
 EOF
+
+cp /tmp/proxy.conf /opt/rh/httpd24/root/etc/httpd/conf.d/proxy.conf
 
 /usr/local/bin/run-httpd24.sh httpd -DFOREGROUND
