@@ -15,6 +15,11 @@ ProxyPass / http://$PROXY_TARGET
 ProxyPassReverse / http://$PROXY_TARGET
 EOF
 
+echo "error_log" > /opt/rh/httpd24/root/etc/httpd/logs/error_log
+echo "access_log" > /opt/rh/httpd24/root/etc/httpd/logs/access_log
+chown apache /opt/rh/httpd24/root/etc/httpd/logs/access_log
+chown apache /opt/rh/httpd24/root/etc/httpd/logs/error_log
+
 cp /tmp/proxy.conf /opt/rh/httpd24/root/etc/httpd/conf.d/proxy.conf
 
 /opt/rh/httpd24/root/usr/sbin/httpd -DFOREGROUND
