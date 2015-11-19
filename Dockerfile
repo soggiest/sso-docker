@@ -2,6 +2,8 @@ FROM registry.access.redhat.com/rhscl/httpd-24-rhel7
 
 USER root
 
+RUN yum -y install tar glibc.i686
+
 COPY run-proxy.sh /root/run-proxy.sh
 COPY httpd.conf /opt/rh/httpd24/root/etc/httpd/conf/httpd.conf
 COPY ssl.conf /opt/rh/httpd24/root/etc/httpd/conf.d/ssl.conf
@@ -17,7 +19,7 @@ RUN chmod 755 /root/ca-wa-12.5-cr02-rhas64.bin
 RUN chmod 755 /tmp/log_to_stdout.pl
 RUN chmod -R 777 /opt/rh/httpd24/
 
-#RUN /root/build_siteminder.sh
+RUN /root/build_siteminder.sh
 
 ENV USER_INSTALL_DIR=/root/siteminder/webagent/r12.5
 
