@@ -14,7 +14,7 @@ USER_INSTALL_DIR=/root/siteminder/webagent/r12.5
 USER_SHORTCUTS=/root
 HOST_REGISTRATION_YES=0
 APACHE_SELECTED=1
-APACHE_WEBSERVER_ROOT=<Path to apache dir, which contains the conf dir>
+APACHE_WEBSERVER_ROOT=/opt/rh/httpd24/root/etc/httpd/conf
 APACHE_SPECIFIC_PATH_YES=
 APACHE_VENDOR_TYPE=HTTP_APACHE
 APACHE_VERSION=2.2.15
@@ -22,4 +22,4 @@ WEB_SERVER_INFO=Apache,/opt/rh/httpd24/root/etc/httpd/conf,Apache 2.2.15,+EMPTYS
 ENABLE_WEBAGENT_RESULT=YES 
 EOF
 
-$USER_INSTALL_DIR/ca-wa-config.sh –f $HOME/webagent_config.properties –i silent;
+$USER_INSTALL_DIR/ca-wa-config.sh –f $HOME/webagent_config.properties –i silent
