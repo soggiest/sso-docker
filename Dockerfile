@@ -17,7 +17,7 @@ RUN chmod 755 /root/ca-wa-12.5-cr02-rhas64.bin
 RUN chmod 755 /tmp/log_to_stdout.pl
 RUN chmod -R 777 /opt/rh/httpd24/
 
-RUN /root/build_siteminder.sh
+#RUN /root/build_siteminder.sh
 
 ENV USER_INSTALL_DIR=/root/siteminder/webagent/r12.5
 
