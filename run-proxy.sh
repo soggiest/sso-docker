@@ -7,7 +7,7 @@
 PROXY_TARGET=`echo -e $PROXY_TARGET`
 
 echo `whoami`
-echo PROXY_TARGET
+echo $PROXY_TARGET
 
 cat <<EOF > /tmp/proxy.conf
 ProxyRequests Off
