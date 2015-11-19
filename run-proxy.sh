@@ -22,5 +22,7 @@ EOF
 
 cp /tmp/proxy.conf /opt/rh/httpd24/root/etc/httpd/conf.d/proxy.conf
 
+/root/host_registry.sh
+
 /opt/rh/httpd24/root/usr/sbin/httpd -DFOREGROUND
 #/usr/local/bin/run-httpd24.sh httpd -DFOREGROUND
