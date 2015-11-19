@@ -7,7 +7,6 @@ COPY httpd.conf /opt/rh/httpd24/root/etc/httpd/conf/httpd.conf
 COPY ssl.conf /opt/rh/httpd24/root/etc/httpd/conf.d/ssl.conf
 RUN chmod 755 /root/run-proxy.sh
 RUN chmod -R 777 /opt/rh/httpd24/
-RUN mv /opt/rh/httpd24/root/etc/httpd/conf.d/ssl.conf /tmp/ssl.conf 
 
 EXPOSE 8998 8999
 
