@@ -7,7 +7,7 @@ export SMREGHOST=”$USER_INSTALL_DIR/bin/”
 exprt SMHOST=”$USER_INSTALL_DIR/config/SmHost.conf”
 export HOSTNAME=`hostname`
 
-$USER_INSTALL_DIR/bin/smreghost –i $POLICY_SERVER –u $POLICY_SERVER_USERNAME –p $POLICY_SERVER_PASSWORD –hn $HOSTNAME – hc $POLICYSERVER –cf “COMPACT” –f $SMHOST
+$USER_INSTALL_DIR/bin/smreghost –i $POLICY_SERVER –u $POLICY_SERVER_USERNAME –p $POLICY_SERVER_PASSWORD –hn $HOSTNAME –hc $POLICYSERVER –cf “COMPACT” –f $SMHOST
 
 cat <<EOF > /root/webagent_config.properties 
 USER_INSTALL_DIR=/root/siteminder/webagent/r12.5
