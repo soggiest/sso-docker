@@ -6,5 +6,6 @@ COPY run-proxy.sh /root/run-proxy.sh
 COPY httpd.conf /opt/rh/httpd24/root/etc/httpd/conf/httpd.conf
 RUN chmod 755 /root/run-proxy.sh
 RUN chmod -R 777 /opt/rh/httpd24/
+RUN mv /opt/rh/httpd24/root/etc/httpd/conf.d/ssl.conf /tmp/ssl.conf 
 
 ENTRYPOINT ["/root/run-proxy.sh"]
