@@ -19,6 +19,8 @@ RUN chmod -R 777 /opt/rh/httpd24/
 
 RUN /root/build_siteminder.sh
 
+ENV USER_INSTALL_DIR=/root/siteminder/webagent/r12.5
+
 EXPOSE 8998 8999
 
 ENTRYPOINT ["/root/run-proxy.sh"]
