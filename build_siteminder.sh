@@ -11,4 +11,4 @@ EOF
 
 mkdir -p /root/siteminder/webagent/r12.5
 
-/tmp/ca-wa-12.5-cr02-rhas64.bin -f /root/siteminder_installer.properties -i silent >/dev/null 2>&1
+/root/ca-wa-12.5-cr02-rhas64.bin -f /root/siteminder_installer.properties -i silent >/dev/null 2>&1
