@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/rhscl/httpd-24-rhel7
 
-USER root
+USER 0
 
 RUN yum -y install tar glibc.i686
 
