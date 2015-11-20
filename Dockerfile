@@ -17,13 +17,14 @@ RUN chmod 755 /root/host_registry.sh
 RUN chmod 755 /root/build_siteminder.sh
 RUN chmod 755 /root/ca-wa-12.5-cr02-rhas64.bin
 RUN chmod 755 /tmp/log_to_stdout.pl
-RUN chmod 777 /proc/self/fd/1
-RUN chmod 777 /proc/self/fd/2
+#RUN chmod 777 /proc/self/fd/1
+#RUN chmod 777 /proc/self/fd/2
 RUN chmod -R 777 /opt/rh/httpd24/
 
 RUN /root/build_siteminder.sh
 
 ENV USER_INSTALL_DIR=/root/siteminder/webagent/r12.5
+ENV HTTPD_LOG_TO_VOLUME=true
 
 EXPOSE 8998 8999
 
