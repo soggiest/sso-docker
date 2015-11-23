@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/rhscl/httpd-24-rhel7
 
 USER 0
 
-RUN yum -y install tar glibc.i686
+RUN yum -y install tar glibc.i686 ps
 
 COPY run-proxy.sh /root/run-proxy.sh
 COPY httpd.conf /opt/rh/httpd24/root/etc/httpd/conf/httpd.conf
@@ -20,6 +20,7 @@ RUN chmod 755 /tmp/log_to_stdout.pl
 #RUN chmod 777 /proc/self/fd/1
 #RUN chmod 777 /proc/self/fd/2
 RUN chmod -R 777 /opt/rh/httpd24/
+RUN chmod -R 777 /var/log/httpd24/
 
 RUN /root/build_siteminder.sh
 
