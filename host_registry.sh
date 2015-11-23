@@ -3,15 +3,15 @@
 #runs the Host Registration scripts
 
 source $USER_INSTALL_DIR/ca_wa_env.sh
-export SMREGHOST=”$USER_INSTALL_DIR/bin/”
-export SMHOST=”$USER_INSTALL_DIR/config/SmHost.conf”
+export SMREGHOST="$USER_INSTALL_DIR/bin/"
+export SMHOST="$USER_INSTALL_DIR/config/SmHost.conf"
 export HOSTNAME=`hostname`
-export POLICY_SERVER=usto-dsvc-smp01.amgen.com;44441
+export POLICY_SERVER=usto-dsvc-smp01.amgen.com:44441
 export POLICYSERVER=usto-dsvc-smp01.amgen.com
 export POLICY_SERVER_USERNAME=registration
 export POLICY_SERVER_PASSWORD=siteminder12
 
-$USER_INSTALL_DIR/bin/smreghost –i $POLICY_SERVER –u $POLICY_SERVER_USERNAME –p $POLICY_SERVER_PASSWORD –hn $HOSTNAME –hc $POLICYSERVER –cf “COMPACT” –f $SMHOST
+$USER_INSTALL_DIR/bin/smreghost -i $POLICY_SERVER -u $POLICY_SERVER_USERNAME -p $POLICY_SERVER_PASSWORD -hn $HOSTNAME -hc $POLICYSERVER -cf "COMPACT" -f $SMHOST
 
 cat <<EOF > /tmp/webagent_config.properties 
 USER_INSTALL_DIR=/root/siteminder/webagent/r12.5
@@ -26,4 +26,4 @@ WEB_SERVER_INFO=Apache,/opt/rh/httpd24/root/etc/httpd/conf,Apache 2.2.15,+EMPTYS
 ENABLE_WEBAGENT_RESULT=YES 
 EOF
 
-$USER_INSTALL_DIR/ca-wa-config.sh –f /tmp/webagent_config.properties –i silent
+$USER_INSTALL_DIR/ca-wa-config.sh -f /tmp/webagent_config.properties -i silent
