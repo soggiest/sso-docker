@@ -20,7 +20,7 @@ EOF
 #chown apache /opt/rh/httpd24/root/etc/httpd/logs/access_log
 #chown apache /opt/rh/httpd24/root/etc/httpd/logs/error_log
 
-cp /tmp/proxy.conf /opt/rh/httpd24/root/etc/httpd/conf.d/proxy.conf
+#cp /tmp/proxy.conf /opt/rh/httpd24/root/etc/httpd/conf.d/proxy.conf
 
 /root/host_registry.sh
 
