@@ -1,6 +1,6 @@
 FROM httpd:2.4
 
-RUN yum -y install tar glibc.i686 ps
+#RUN yum -y install tar glibc.i686
 
 COPY run-proxy.sh /root/run-proxy.sh
 COPY httpd.conf /usr/local/apache2/conf/httpd.conf
