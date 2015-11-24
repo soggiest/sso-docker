@@ -16,7 +16,7 @@ RUN chmod 755 /tmp/run-proxy.sh
 #RUN chmod 755 /root/ca-wa-12.5-cr02-rhas64.bin
 #RUN chmod 755 /tmp/log_to_stdout.pl
 
-
+RUN chmod -R 777 /usr/local/apache2
 ##RUN chmod 777 /proc/self/fd/1
 ##RUN chmod 777 /proc/self/fd/2
 ##RUN chmod -R 777 /opt/rh/httpd24/
