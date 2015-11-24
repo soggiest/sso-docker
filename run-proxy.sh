@@ -13,8 +13,8 @@ cat <<EOF > /tmp/proxy.conf
 ProxyRequests Off
 ProxyVia On
 ProxyPreserveHost On
-ProxyPass / http://$PROXY_TARGET
-ProxyPassReverse / http://$PROXY_TARGET
+ProxyPass /proxy http://$PROXY_TARGET
+ProxyPassReverse /proxy http://$PROXY_TARGET
 Header set Proxy-Test "I love reverse proxies!
 EOF
 
