@@ -11,6 +11,8 @@ echo $PROXY_TARGET
 
 cat <<EOF > /tmp/proxy.conf
 ProxyRequests Off
+ProxyVia On
+ProxyPreserveHost On
 ProxyPass / http://$PROXY_TARGET
 ProxyPassReverse / http://$PROXY_TARGET
 EOF
