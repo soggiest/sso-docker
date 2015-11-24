@@ -2,7 +2,7 @@ FROM httpd:2.4
 
 #RUN yum -y install tar glibc.i686
 
-COPY run-proxy.sh /root/run-proxy.sh
+COPY run-proxy.sh /tmp/run-proxy.sh
 COPY httpd.conf /usr/local/apache2/conf/httpd.conf
 ##COPY ssl.conf /opt/rh/httpd24/root/etc/httpd/conf.d/ssl.conf
 #COPY ca-wa-12.5-cr02-rhas64.bin /root/ca-wa-12.5-cr02-rhas64.bin
@@ -29,4 +29,4 @@ ENV HTTPD_LOG_TO_VOLUME=true
 
 EXPOSE 8998
 
-ENTRYPOINT ["/root/run-proxy.sh"]
+ENTRYPOINT ["/tmp/run-proxy.sh"]
