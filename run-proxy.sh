@@ -15,6 +15,7 @@ ProxyVia On
 ProxyPreserveHost On
 ProxyPass / http://$PROXY_TARGET
 ProxyPassReverse / http://$PROXY_TARGET
+Header set Proxy-Test "I love reverse proxies!
 EOF
 
 #echo "error_log" > /opt/rh/httpd24/root/etc/httpd/logs/error_log
