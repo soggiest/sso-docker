@@ -21,10 +21,18 @@ EOF
 #chown apache /opt/rh/httpd24/root/etc/httpd/logs/error_log
 
 #cp /tmp/proxy.conf /opt/rh/httpd24/root/etc/httpd/conf.d/proxy.conf
+cp /tmp/proxy.conf /usr/local/apache2/conf.d/proxy.conf
 
 /root/host_registry.sh
 
 #/opt/rh/httpd24/root/usr/sbin/httpd -DFOREGROUND
-/usr/local/bin/run-httpd24.sh httpd -DFOREGROUND
+#/usr/local/bin/run-httpd24.sh httpd -DFOREGROUND
 
-exec "$@"
+#exec "$@"
+
+set -e
+
+# Apache gets grumpy about PID files pre-existing
+rm -f /usr/local/apache2/logs/httpd.pid
+
+exec httpd -DFOREGROUND
