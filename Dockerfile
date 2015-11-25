@@ -4,6 +4,7 @@ FROM httpd:2.4
 RUN apt-get update
 RUN apt-get install libc6 libc6-dev
 RUN apt-get -y install default-jre
+RUN apt-get -y install default-jdk
 
 COPY run-proxy.sh /tmp/run-proxy.sh
 COPY httpd.conf /usr/local/apache2/conf/httpd.conf
