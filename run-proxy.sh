@@ -15,8 +15,8 @@ ProxyVia On
 ProxyPreserveHost Off
 ProxyStatus On
 AllowCONNECT 8080
-ProxyPass /proxy http://$PROXY_TARGET
-ProxyPassReverse /proxy http://$PROXY_TARGET
+ProxyPass / http://$PROXY_TARGET/
+ProxyPassReverse / http://$PROXY_TARGET/
 Header set Proxy-Test "I love reverse proxies!"
 LogLevel Info
 EOF
