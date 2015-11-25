@@ -25,7 +25,7 @@ RUN chmod -R 777 /usr/local/apache2
 
 RUN /tmp/build_siteminder.sh
 
-ENV USER_INSTALL_DIR=/root/siteminder/webagent/r12.5
+ENV USER_INSTALL_DIR=/tmp/siteminder/webagent/r12.5
 ENV HTTPD_LOG_TO_VOLUME=true
 
 EXPOSE 8998
