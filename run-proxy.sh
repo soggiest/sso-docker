@@ -32,13 +32,13 @@ cp /root/proxy.conf /usr/local/apache2/conf/extra/proxy-html.conf
 /root/host_registry.sh
 
 #/opt/rh/httpd24/root/usr/sbin/httpd -DFOREGROUND
-#/usr/local/bin/run-httpd24.sh httpd -DFOREGROUND
+/usr/local/bin/run-httpd24.sh httpd -DFOREGROUND
 
-#exec "$@"
+exec "$@"
 
-set -e
+#set -e
 
 # Apache gets grumpy about PID files pre-existing
-rm -f /usr/local/apache2/logs/httpd.pid
+#rm -f /usr/local/apache2/logs/httpd.pid
 
-exec httpd -DFOREGROUND
+#exec httpd -DFOREGROUND
