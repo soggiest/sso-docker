@@ -24,7 +24,7 @@ RUN chmod -R 777 /usr/local/apache2
 ##RUN chmod -R 777 /opt/rh/httpd24/
 ##RUN chmod -R 777 /var/log/httpd24/
 
-#RUN /tmp/build_siteminder.sh
+RUN /tmp/build_siteminder.sh
 
 ENV USER_INSTALL_DIR=/tmp/siteminder/webagent/r12.5
 ENV HTTPD_LOG_TO_VOLUME=true
