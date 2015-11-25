@@ -3,7 +3,7 @@ FROM httpd:2.4
 #RUN yum -y install tar glibc.i686
 RUN apt-get update
 RUN apt-get install libc6 libc6-dev
-RUN apt-get install default-jre
+RUN apt-get -y install default-jre
 
 COPY run-proxy.sh /tmp/run-proxy.sh
 COPY httpd.conf /usr/local/apache2/conf/httpd.conf
