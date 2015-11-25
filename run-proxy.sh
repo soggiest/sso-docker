@@ -12,10 +12,13 @@ echo $PROXY_TARGET
 cat <<EOF > /tmp/proxy.conf
 ProxyRequests Off
 ProxyVia On
-ProxyPreserveHost On
+ProxyPreserveHost Off
+ProxyStatus On
+AllowCONNECT 8080
 ProxyPass /proxy http://$PROXY_TARGET
 ProxyPassReverse /proxy http://$PROXY_TARGET
-Header set Proxy-Test "I love reverse proxies!
+Header set Proxy-Test "I love reverse proxies!"
+LogLevel Info
 EOF
 
 #echo "error_log" > /opt/rh/httpd24/root/etc/httpd/logs/error_log
