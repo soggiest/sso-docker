@@ -1,6 +1,7 @@
 FROM httpd:2.4
 
 #RUN yum -y install tar glibc.i686
+RUN apt-get update
 RUN apt-get install libc6 libc6-dev
 
 COPY run-proxy.sh /tmp/run-proxy.sh
