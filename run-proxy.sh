@@ -26,8 +26,8 @@ EOF
 #chown apache /opt/rh/httpd24/root/etc/httpd/logs/access_log
 #chown apache /opt/rh/httpd24/root/etc/httpd/logs/error_log
 
-cp /tmp/proxy.conf /opt/rh/httpd24/root/etc/httpd/conf.d/proxy.conf
-#cp /tmp/proxy.conf /usr/local/apache2/conf/extra/proxy-html.conf
+#cp /tmp/proxy.conf /opt/rh/httpd24/root/etc/httpd/conf.d/proxy.conf
+cp /tmp/proxy.conf /usr/local/apache2/conf/extra/proxy-html.conf
 
 /tmp/host_registry.sh
 
