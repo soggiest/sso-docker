@@ -7,7 +7,7 @@ COPY run-proxy.sh /tmp/run-proxy.sh
 COPY httpd.conf /usr/local/apache2/conf/httpd.conf
 #COPY ssl.conf /opt/rh/httpd24/root/etc/httpd/conf.d/ssl.conf
 COPY ca-wa-12.5-cr02-rhas64.bin /tmp/ca-wa-12.5-cr02-rhas64.bin
-COPY host_registry.sh /root/host_registry.sh
+COPY host_registry.sh /tmp/host_registry.sh
 #COPY log_to_stdout.pl /tmp/log_to_stdout.pl
 COPY build_siteminder.sh /tmp/build_siteminder.sh
 
