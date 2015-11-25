@@ -9,7 +9,7 @@ PROXY_TARGET=`echo -e $PROXY_TARGET`
 echo `whoami`
 echo $PROXY_TARGET
 
-cat <<EOF > /root/proxy.conf
+cat <<EOF > /tmp/proxy.conf
 ProxyRequests Off
 ProxyVia On
 ProxyPreserveHost Off
@@ -27,7 +27,7 @@ EOF
 #chown apache /opt/rh/httpd24/root/etc/httpd/logs/error_log
 
 #cp /root/proxy.conf /opt/rh/httpd24/root/etc/httpd/conf.d/proxy.conf
-cp /root/proxy.conf /usr/local/apache2/conf/extra/proxy-html.conf
+cp /tmp/proxy.conf /usr/local/apache2/conf/extra/proxy-html.conf
 
 /root/host_registry.sh
 
