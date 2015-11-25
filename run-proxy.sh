@@ -31,8 +31,8 @@ cp /root/proxy.conf /usr/local/apache2/conf/extra/proxy-html.conf
 
 /root/host_registry.sh
 
-#/opt/rh/httpd24/root/usr/sbin/httpd -DFOREGROUND
-/usr/local/bin/run-httpd24.sh httpd -DFOREGROUND
+/opt/rh/httpd24/root/usr/sbin/httpd -DFOREGROUND
+#/usr/local/bin/run-httpd24.sh httpd -DFOREGROUND
 
 exec "$@"
 
