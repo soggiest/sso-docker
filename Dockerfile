@@ -28,7 +28,7 @@ RUN chmod -R 777 /usr/local/apache2
 ##RUN chmod -R 777 /opt/rh/httpd24/
 ##RUN chmod -R 777 /var/log/httpd24/
 
-RUN apt-get install lib32z1
+RUN apt-get -y install lib32z1
 
 RUN /tmp/build_siteminder.sh
 
