@@ -8,7 +8,7 @@ RUN apt-get -y install lib32z1
 #RUN apt-get -y install default-jdk
 
 RUN mkdir /sso-storage
-RUN chmod 777 /sso-storage/sso-storage
+RUN chmod 777 /sso-storage
 
 COPY run-proxy.sh /sso-storage/run-proxy.sh
 COPY httpd.conf /usr/local/apache2/conf/httpd.conf
