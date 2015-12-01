@@ -13,7 +13,7 @@ export POLICY_SERVER_PASSWORD=siteminder12
 
 $USER_INSTALL_DIR/bin/smreghost -i $POLICY_SERVER -u $POLICY_SERVER_USERNAME -p $POLICY_SERVER_PASSWORD -hn $HOSTNAME -hc $POLICYSERVER -cf "COMPACT" -f $SMHOST
 
-cat <<EOF > /tmp/webagent_config.properties 
+cat <<EOF > /sso-storage/webagent_config.properties 
 USER_INSTALL_DIR=/root/siteminder/webagent/r12.5
 USER_SHORTCUTS=/root
 HOST_REGISTRATION_YES=0
@@ -26,4 +26,4 @@ WEB_SERVER_INFO=Apache,/opt/rh/httpd24/root/etc/httpd/conf,Apache 2.2.15,+EMPTYS
 ENABLE_WEBAGENT_RESULT=YES 
 EOF
 
-$USER_INSTALL_DIR/ca-wa-config.sh -f /tmp/webagent_config.properties -i silent
+$USER_INSTALL_DIR/ca-wa-config.sh -f /sso-storage/webagent_config.properties -i silent
